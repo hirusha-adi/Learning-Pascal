@@ -1,4 +1,4 @@
-program varibales_and_datatypes(input, output);
+program user_input(input, output);
 
 var
     int1: integer;
