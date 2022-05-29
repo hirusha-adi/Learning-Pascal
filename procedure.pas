@@ -1,4 +1,4 @@
-program functions(input, output);
+program procedures(input, output);
 var
     x : integer;
 
