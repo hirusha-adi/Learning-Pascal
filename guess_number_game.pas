@@ -9,7 +9,6 @@ begin
 
     // Get a proper input from the user
     repeat
-        
         writeln('Please select a game,');
         writeln();
         writeln('A) 10');
@@ -47,17 +46,18 @@ begin
     end;
 
     // repeat the game until the user input matches the randomly generated number
+    count := 1;
+
     repeat
+        // handling user input properly
         repeat
             writeln;
-            write('guess > ');
+            write('guess [', count, '] > ');
             readln(ui);
             val(ui, guess, error);
             if error <> 0 then
                 writeln('Incorrect input, please try again!');
         until (error = 0);
-
-        count := count + 1;
 
         if guess < answer then
             writeln('Too Low!')
@@ -65,6 +65,9 @@ begin
             writeln('Too High!')
         else
             writeln('You guessed the correct number in ', count, ' guesses!');
+
+        // increment `count`
+        count := count + 1;
 
     until (guess = answer);
 end.
